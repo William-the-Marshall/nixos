@@ -34,7 +34,9 @@
 
     hjem.users.jonf = {
       files = {
-        ".config/niri/config.kdl".source = ./niri-config.kdl;
+        ".config/niri/config.kdl".source = ./config.kdl;
+        ".config/niri/binds.kdl".source = ./binds.kdl;
+        ".config/niri/noctalia.kdl".source = ./noctalia.kdl;
       };
     };
 

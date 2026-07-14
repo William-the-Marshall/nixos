@@ -17,9 +17,9 @@
     services.tuned.enable = true;
     services.upower.enable = true;
 
-    hjem.users.eduardo = {
+    hjem.users.jonf = {
       files = {
-        ".config/noctalia-shell/config.json".source = ./noctalia.json;
+        ".config/noctalia/config.toml".source = ./config.toml;
       };
     };
 

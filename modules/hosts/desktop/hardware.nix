@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.Rubicon = { config, lib, pkgs, modulesPath, ... }:
+  flake.nixosModules.desktop = { config, lib, pkgs, modulesPath, ... }:
 
   {
     imports =

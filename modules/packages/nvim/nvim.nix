@@ -36,7 +36,7 @@
         ".config/nvim/plugin/flterm.lua".source = ./config/plugin/flterm.lua;
         ".config/nvim/plugin/lsp.lua".source = ./config/plugin/lsp.lua;
         ".config/nvim/plugin/quickformat.lua".source = ./config/plugin/quickformat.lua;
-        ".config/nvim/plugin/tonycontext.lua".source = ./config/plugin/tonycontext.lua.lua;
+        ".config/nvim/plugin/tonycontext.lua".source = ./config/plugin/tonycontext.lua;
         ".config/nvim/plugin/tonysitter.lua".source = ./config/plugin/tonysitter.lua;
 
       };
