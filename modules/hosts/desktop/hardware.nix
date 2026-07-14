@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.desktop = { config, lib, pkgs, modulesPath, ... }:
+  flake.nixosModules.hardware = { config, lib, pkgs, modulesPath, ... }:
 
   {
     imports =

@@ -2,6 +2,7 @@
   flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       desktop
+      hardware
     ];
   };
 
