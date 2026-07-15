@@ -18,11 +18,11 @@
       greetd
       vicinae
 
-      # packages
+      # userland packages
       core
       cli
       programming
-
+      gaming
       niri
       noctalia
       kitty
