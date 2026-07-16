@@ -7,27 +7,27 @@
     imports = [inputs.stylix.nixosModules.stylix];
 
     stylix.enable = true;
-    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal.yaml";
+    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
     stylix.polarity = "dark";
 
     stylix.cursor = {
-      package = pkgs.volantes-cursors;
-      name = "volantes_cursors";
+      package = pkgs.everforest-cursors;
+      name = "Everforest-Cursors";
       size = 24;
     };
 
     stylix.fonts = {
       serif = {
-        package = pkgs.poppins;
-        name = "Poppins";
+        package = pkgs.jetbrains-mono;
+        name = "Jetbrains-Mono";
       };
       sansSerif = {
-        package = pkgs.poppins;
-        name = "Poppins";
+        package = pkgs.jetbrains-mono;
+        name = "Jetbrains-Mono";
       };
       monospace = {
-        package = pkgs.maple-mono.truetype;
-        name = "Maple Mono";
+        package = pkgs.jetbrains-mono;
+        name = "Jetbrains-Mono";
       };
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
