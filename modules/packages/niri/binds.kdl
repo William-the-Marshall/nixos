@@ -86,9 +86,6 @@ binds {
     Mod+Alt+F { toggle-window-floating; }
     Mod+Alt+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
-    // NOTE: "Mod+Shift+W -> create window rule" was a DMS-only GUI feature
-    // (spawn "dms" ipc call window-rules toggle) with no native niri or
-    // Noctalia equivalent - window rules are edited in config.kdl by hand.
 
     // === Focus Navigation ===
     Mod+Left  { focus-column-left; }
