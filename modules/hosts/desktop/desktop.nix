@@ -34,7 +34,7 @@
       # userland etc.
       gaming
       music
-
+      zen
     ];
 
   };
