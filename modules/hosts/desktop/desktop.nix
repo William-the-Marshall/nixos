@@ -9,6 +9,10 @@
 
   flake.nixosModules.desktop = {pkgs, ...}: {
     imports = with self.nixosModules; [
+      # core configugration
+      core
+
+      # enviroment managment
       hjem
       stylix
 
@@ -18,16 +22,20 @@
       greetd
       vicinae
 
-      # userland packages
-      core
+      # terminal pacakges
+      kitty
       cli
       programming
-      gaming
-      niri
-      noctalia
-      kitty
       neovim
-      zen
+      
+      # desktop enviroment
+      niri 
+      noctalia
+      
+      # userland etc.
+      gaming
+      music
+
     ];
 
   };
