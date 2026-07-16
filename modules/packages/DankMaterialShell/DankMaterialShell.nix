@@ -1,15 +1,15 @@
 {inputs, ...}: {
 
   flake-file.inputs ={
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
+    DankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  flake.nixosModules.noctalia = {pkgs, lib, ...}: {
+  flake.nixosModules.DankMaterialShell = {pkgs, lib, ...}: {
 
     environment.systemPackages = with pkgs; [
-      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.DankMaterialShell.packages.${pkgs.stdenv.hostPlatform.system}.default
       evtest
       bemenu
     ];
@@ -19,7 +19,7 @@
 
     hjem.users.jonf = {
       files = {
-        ".config/noctalia/config.toml".source = ./config.toml;
+        ".config/DankMaterialShell/settings.json".source = ./settings.json;
       };
     };
 

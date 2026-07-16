@@ -29,7 +29,7 @@
       
       # desktop enviroment
       niri 
-      noctalia
+      DankMaterialShell
       
       # userland etc.
       gaming
