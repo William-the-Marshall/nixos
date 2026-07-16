@@ -20,7 +20,6 @@
       audio
       graphics
       greetd
-      vicinae
 
       # terminal pacakges
       kitty
