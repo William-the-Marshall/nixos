@@ -29,8 +29,8 @@
       
       # desktop enviroment
       niri 
-      dms
-
+      DankMaterialShell
+      
       # userland etc.
       gaming
       music
