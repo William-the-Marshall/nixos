@@ -32,12 +32,13 @@
       NIXOS_OZONE_WL = "1";
     };
 
-    hjem.users.jonf = {
-      files = {
-        ".config/niri/config.kdl".source = ./config.kdl;
-        ".config/niri/binds.kdl".source = ./binds.kdl;
-        ".config/niri/noctalia.kdl".source = ./noctalia.kdl;
-      };
+   # hjem.users.jonf = {
+    #  files = {
+    #  };
+   # };
+
+    home-manager.users.jonf = {
+      xdg.configFile."niri/hm.kdl".source = ./config.kdl;
     };
 
   };

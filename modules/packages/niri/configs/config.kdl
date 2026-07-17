@@ -1,9 +1,8 @@
 config-notification {
     disable-failed
 }
-spawn-at-startup "noctalia"
+
 spawn-at-startup "~/.local/bin/niri-sidebar" "listen"
-spawn-at-startup "dms" "run"
 
 output "eDP-1" {
     mode "1920x1080@60"
@@ -38,6 +37,7 @@ input {
 	repeat-delay 250
 	repeat-rate 40
         xkb 
+
         numlock
     }
     mouse {
@@ -49,16 +49,10 @@ input {
     }
 }
 
-cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 25
-}
-
 layout {
     // Set gaps around windows in logical pixels.
     background-color "transparent"
     center-focused-column "always"
-    gaps 4
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -76,33 +70,19 @@ layout {
         inactive-color "#d0d0d0"      
         urgent-color "#cc4444"      
     }
-    // was auto-set by DMS's matugen theming (dms/colors.kdl) - static now
-    focus-ring {
-        active-color   "#7aa2f7"
-        inactive-color "#3b4261"
-        urgent-color   "#f7768e"
-    }
     shadow {
         softness 30
         spread 5
         offset x=0 y=5
         color "#0007"
     }
-    tab-indicator {
-        active-color   "#7aa2f7"
-        inactive-color "#3b4261"
-        urgent-color   "#f7768e"
-    }
-    insert-hint {
-        color "#7aa2f780"
-    }
     struts 
 }
 
-// NOTE: was a DMS/quickshell layer-placement rule. Noctalia's current
-// (v5) build no longer uses quickshell at all, so this rule has no target -
-// check Noctalia's niri integration docs for whatever it now recommends here.
-
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
 overview {
     workspace-shadow {
         off
@@ -169,9 +149,8 @@ window-rule {
     draw-border-with-background false
     geometry-corner-radius 12
     clip-to-geometry true
-    tiled-state true
 
-    opacity 0.85
+    opacity 1.0
 
     background-effect {
 	blur true
@@ -217,6 +196,12 @@ window-rule {
     match app-id="steam" title=r"^notificationtoasts_\d+_desktop$"
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
+// Open dms windows as floating by default
+window-rule {
+    match app-id=r"org.quickshell$"
+    match app-id=r"com.danklinux.dms$"
+    open-floating true
+}
 debug {
     honor-xdg-activation-with-invalid-serial
 }
@@ -229,13 +214,13 @@ recent-windows {
         Alt+grave       { next-window filter="app-id"; }
         Alt+Shift+grave { previous-window filter="app-id"; }
     }
-    // was auto-set by DMS's matugen theming (dms/alttab.kdl) - static now
-    highlight {
-        active-color   "#7dcfff"
-        urgent-color   "#f7768e"
-        corner-radius 12
-    }
 }
 
-include "binds.kdl"
-include "noctalia.kdl"
+// Include dms files
+include "dms/colors.kdl"
+include "dms/layout.kdl"
+include "dms/alttab.kdl"
+include "dms/binds.kdl"
+include "dms/outputs.kdl"
+include "dms/cursor.kdl"
+include "dms/windowrules.kdl"
