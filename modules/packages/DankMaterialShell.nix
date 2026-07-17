@@ -4,6 +4,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    DankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   flake.nixosModules.DankMaterialShell = {pkgs, lib, ...}: {
