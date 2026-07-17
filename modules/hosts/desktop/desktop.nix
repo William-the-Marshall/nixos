@@ -14,6 +14,7 @@
 
       # enviroment managment
       hjem
+      stylix
 
       # services
       audio
@@ -28,8 +29,8 @@
       
       # desktop enviroment
       niri 
-      DankMaterialShell
-      
+      noctalia
+
       # userland etc.
       gaming
       music
