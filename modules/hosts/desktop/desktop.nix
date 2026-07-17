@@ -14,7 +14,6 @@
 
       # enviroment managment
       hjem
-      stylix
 
       # services
       audio
