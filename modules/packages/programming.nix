@@ -3,6 +3,7 @@
 
     environment.systemPackages = with pkgs; [
       gcc
+      nautilus
       gnumake
       cmake
       go

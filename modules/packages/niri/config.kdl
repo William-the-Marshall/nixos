@@ -3,6 +3,7 @@ config-notification {
 }
 spawn-at-startup "noctalia"
 spawn-at-startup "~/.local/bin/niri-sidebar" "listen"
+spawn-at-startup "dms" "run"
 
 output "eDP-1" {
     mode "1920x1080@60"

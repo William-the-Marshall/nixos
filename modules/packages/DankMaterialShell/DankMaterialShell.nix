@@ -11,6 +11,7 @@
     environment.systemPackages = with pkgs; [
       inputs.DankMaterialShell.packages.${pkgs.stdenv.hostPlatform.system}.default
       evtest
+      quickshell
       bemenu
     ];
     
