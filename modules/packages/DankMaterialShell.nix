@@ -14,6 +14,8 @@
     imports = [ inputs.home-manager.nixosModules.home-manager ];
 
     home-manager.users.jonf = {
+      home.stateVersion = "26.05";
+
       imports = [
         inputs.DankMaterialShell.homeModules.dank-material-shell
         inputs.DankMaterialShell.homeModules.niri
