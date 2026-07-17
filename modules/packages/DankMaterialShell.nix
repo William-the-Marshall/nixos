@@ -18,7 +18,6 @@
 
       imports = [
         inputs.DankMaterialShell.homeModules.dank-material-shell
-        inputs.DankMaterialShell.homeModules.niri
       ];
 
       programs.dank-material-shell = {
@@ -871,7 +870,6 @@
 
         };
 
-        niri.includes.enable = true;
       };
     };
 
