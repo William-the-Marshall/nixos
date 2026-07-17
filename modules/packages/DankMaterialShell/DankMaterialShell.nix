@@ -14,21 +14,6 @@
       bemenu
     ];
     
-    programs.dank-material-shell = {
-      enable = true;
-
-      systemd = {
-        enable = true;
-        restartIfChanged = true;
-      };
-      
-      enableSystemMonitoring = true;
-      enableVPN = true;
-      enableDynamicThemeing = true;
-      enableAudioWavelength = true;
-
-    };
-
     services.tuned.enable = true;
     services.upower.enable = true;
 
