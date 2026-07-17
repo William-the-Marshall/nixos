@@ -1,30 +1,32 @@
 {
-  flake.nixosModules.hardware = { config, lib, pkgs, modulesPath, ... }:
+	flake.nixosModules.hardware = { config, lib, pkgs, modulesPath, ... }:
 
-  {
-    imports =
-      [ (modulesPath + "/installer/scan/not-detected.nix") ];
+ { 
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
 
-      boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-      boot.initrd.kernelModules = [ ];
-      boot.kernelModules = [ ];
-      boot.extraModulePackages = [ ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ ];
+  boot.extraModulePackages = [ ];
 
-      fileSystems."/" =
-        { device = "/dev/disk/by-uuid/d46b678e-616e-44bd-83a1-c7fcb276c202";
-          fsType = "ext4";
-        };
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/5597d21d-7a84-453b-bf3f-85d85afac446";
+      fsType = "ext4";
+    };
 
-      fileSystems."/boot" =
-        { device = "/dev/disk/by-uuid/EAF6-8E80";
-          fsType = "vfat";
-          options = [ "fmask=0022" "dmask=0022" ];
-        };
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/1E91-5CA8";
+      fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
+    };
 
-      swapDevices =
-        [ { device = "/dev/disk/by-uuid/1f6fae04-0a5a-4311-aefb-a38d9d0387de"; } ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/3f84e261-2dbe-43bf-b623-9692c7f9e0e8"; }
+    ];
 
-      nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-      hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  };
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+ };
 }

@@ -58,13 +58,13 @@ source = "community"
     community_ids = [ "papirus-icons" ]
 
 [wallpaper.default]
-path = "/home/jonf/Pictures/Wallpapers/nightmountain.jpg"
+path = "/home/jonf/Pictures/Wallpapers/nightmount.jpg"
 
 [wallpaper.last]
-path = "/home/jonf/Pictures/Wallpapers/nightmountain.jpg"
+path = "/home/jonf/Pictures/Wallpapers/nightmount.jpg"
 
 [wallpaper.monitors.DP-1]
-path = "/home/jonf/Pictures/Wallpapers/nightmountain.jpg"
+path = "/home/jonf/Pictures/Wallpapers/nightmount.jpg"
 
 [widget.media]
 hide_when_no_media = true
